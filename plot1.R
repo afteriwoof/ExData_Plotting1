@@ -9,8 +9,9 @@ subdates<-as.Date(c("1/2/2007","2/2/2007"),"%d/%m/%Y")
 subdata<-subset(data,Date %in% subdates)
 
 # plot1.R
+png("plot1.png", width=480, height=480, units="px", bg="white")
 hist(subdata$Global_active_power,xlab="Global Active Power (kilowatts)",col="red",main="Global Active Power")
-dev.copy(png,filename="plot1.png",width=480,height=480,units="px",bg="white")
-
+#dev.copy(png,filename="plot1.png",width=480,height=480,units="px",bg="white")
+dev.off()
 
 
